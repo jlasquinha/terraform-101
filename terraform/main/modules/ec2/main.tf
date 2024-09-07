@@ -15,6 +15,7 @@ resource "aws_instance" "webserver" {
 
   user_data = <<-EOF
               #!/bin/bash
+                ps ax | grep "/usr/bin/yum" | grep -v grep | awk '{print $1}' | xargs kill
                 yum update -y
                 yum install nginx -y
                 systemctl start nginx
