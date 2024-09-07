@@ -19,5 +19,5 @@ variable "ami_id" {
 variable "public_key" {
   description = "The public key to be used for the AWS Key Pair."
   type        = string
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZ6"
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD0ZI7jP0"
 }
