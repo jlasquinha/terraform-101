@@ -13,15 +13,15 @@ resource "aws_instance" "webserver" {
     Name = "WebServerLaskaWebDe"
   }
 
-  user_data = <<-EOF
-              #!/bin/bash
-                yum update update -y
-                yum update install nginx -y
-                systemctl start nginx
-                systemctl enable nginx
-                echo "<h1>LaskaWeb - DE</h1>" > /var/www/html/index.html
-                EOF
-}
+    user_data = <<-EOF
+                #!/bin/bash
+                  yum update -y
+                  yum  install nginx -y
+                  systemctl start nginx
+                  systemctl enable nginx
+                  echo "<h1>LaskaWeb - DE</h1>" > /usr/share/nginx/html/index.html
+                  EOF
+  }
 
 resource "aws_key_pair" "my_key" {
   key_name   = var.key_name
