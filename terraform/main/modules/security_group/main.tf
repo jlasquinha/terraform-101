@@ -1,5 +1,5 @@
-resource "aws_security_group" "webserver_sg" {
-  name        = "webserver-security-group"
+resource "aws_security_group" "laskaweb_de_sg" {
+  name        = "laskaweb-de-security-group"
   description = "Security group for webserver allowing HTTP traffic"
   vpc_id      = var.vpc_id
 
@@ -36,6 +36,6 @@ resource "aws_security_group" "webserver_sg" {
   }
 
   tags = {
-    Name = "WebServerSG"
+    Name = "LaskaWebDeSG"
   }
 }

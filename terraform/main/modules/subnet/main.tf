@@ -5,7 +5,7 @@ resource "aws_subnet" "public_subnet" {
   availability_zone       = "eu-west-1a"
 
   tags = {
-    Name = "MinhaPublicSubnet"
+    Name = "LaskWebDePublicSubnet"
   }
 }
 
@@ -17,6 +17,6 @@ resource "aws_subnet" "private_subnet" {
   availability_zone       = "eu-west-1b"
 
   tags = {
-    Name = "MinhaPrivateSubnet"
+    Name = "LaskaWebDePrivateSubnet"
   }
 }

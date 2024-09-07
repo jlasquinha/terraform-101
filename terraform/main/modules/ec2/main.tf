@@ -15,11 +15,11 @@ resource "aws_instance" "webserver" {
 
   user_data = <<-EOF
               #!/bin/bash
-                apt-get update -y
-                apt-get install nginx -y
+                yum update -y
+                yum install nginx -y
                 systemctl start nginx
                 systemctl enable nginx
-                echo "<h1>Deployado via Terraform com o Gomex e o Jeferson</h1>" > /var/www/html/index.html
+                echo "<h1>LaskaWebDe</h1>" > /var/www/html/index.html
                 EOF
 }
 
